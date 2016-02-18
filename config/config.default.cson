@@ -7,11 +7,11 @@
 
 
 
-"title": "Your Blog title"
+"title": "National Safety Stand Down"
 
 # API
 "api":
-    "baseUrl": "http://dev.julienrenaux.fr/wp-json"
+    "baseUrl": "http://159.203.5.57/wp-json"
     "timeout": 30000
     "maxAttempt": 3
 
