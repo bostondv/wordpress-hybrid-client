@@ -1,34 +1,11 @@
 # WordPress Hybrid Client
 
-<span class="badge-flattr"><a href="https://flattr.com/submit/auto?user_id=shprink&url=https%3A%2F%2Fgithub.com%2Fshprink%2Fwordpress-hybrid-client" title="Donate to this project using Flattr"><img src="https://img.shields.io/badge/flattr-donate-yellow.svg" alt="Flattr donate button" /></a></span>
-<span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=PFP99GE9V56RS" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
 
-![screenshots](http://julienrenaux.fr/wp-content/uploads/2015/07/devices.jpg)
 
 ## Chat
 
 [![Join the chat at https://gitter.im/shprink/wordpress-hybrid-client](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/shprink/wordpress-hybrid-client)
 
-## Features
-
-- [X] Posts
-- [X] Pages
-- [X] Custom posts
-- [X] Taxonomies (Category, Tag and custom)
-- [X] Authors
-- [X] Search
-- [X] Push Notifications
-- [X] Custom templates (overwrite any template of the app)
-- [X] Social sharing
-- [X] Sass variables
-- [X] Parameters Page
-      - Language switch [English|French|Chinese|Spanish|Polish|German|Portuguese|Italian|Dutch|Russian|Turkish]
-      - Accessibility (Post font size)
-- [X] Image cache on device
-- [X] App rate plugin
-- [X] Syntax highlighter
-- [X] Offline (Bookmarks)
-- [X] Comments (Submitting is not supported yet)
 
 ## Built with WPHC
 
