@@ -1,10 +1,6 @@
 let mod = angular.module('wordpress-hybrid-client.overwriteTemplates', []);
 
 mod.run(($templateCache) => {
-    // customPosts
-    $templateCache.put('customPosts/movie/item.html', require('!html!./customPosts/movie/item.html'));
-    $templateCache.put('customPosts/movie/list.html', require('!html!./customPosts/movie/list.html'));
-
     // BELOW ARE ALL THE TEMPLATES YOU CAN OVERWRITE IN WPHC
     // To do so go in the `lib/templates` folder, copy the template you want to modify
     // then past it in the current folder `config/templates`

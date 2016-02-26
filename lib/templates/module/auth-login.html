@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-nav-title>{{'login.title' | translate}}</ion-nav-title>
+    <form name="loginCtrl.form" ng-submit="loginCtrl.login()">
+        <ion-content class="wphc-login padding has-footer">
+            <div class="list card">
+                <div class="item item-text-wrap">
+                    (Logo)
+                </div>
+                <label class="item item-input">
+                    <input type="text" name="email" placeholder="Email Address" required>
+                </label>
+                <label class="item item-input">
+                    <input type="password" name="password" placeholder="Password" required>
+                </label>
+            </div>
+        </ion-content>
+        <ion-footer-bar align-title="center" class="bar-positive">
+            <div class="button-bar">
+                <button type="submit" class="button button-clear">{{'login.submit' | translate}}</button>
+            </div>
+        </ion-footer-bar>
+    </form>
+</ion-view>

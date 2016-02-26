@@ -27,6 +27,7 @@ menuModule = require './menu/index.js'
 bookmarkModule = require './bookmark/index.js'
 accessibilityModule = require './accessibility/index.js'
 loadingModule = require './loading/index.js'
+authModule = require './auth/index.js'
 
 # Style entry point
 require './scss/bootstrap'
@@ -53,6 +54,7 @@ module.exports = app = angular.module 'wordpress-hybrid-client', [
     bookmarkModule
     accessibilityModule
     loadingModule
+    authModule
     require('./cordova/cordova.module').name
     require('./cacheImg/cacheImg.module').name
     require('./syntaxHighlighter/syntaxHighlighter.module').name

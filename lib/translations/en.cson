@@ -21,6 +21,9 @@
     "settings": "Settings"
     "customPosts": "Custom posts"
     "customTaxonomy": "Custom Taxonomy"
+    "login": "Login"
+    "logout": "Logout"
+    "register": "Register"
 "pushNotifications":
     "newContent":
         "title": "New content!"
@@ -86,3 +89,10 @@
     "large": "Large"
     "x-large": "Xlarge"
     "xx-large": "XXlarge"
+"login":
+    "title": "Login"
+    "submit": "Login"
+"register":
+    "title": "Register"
+    "nextStep": "Continue"
+    "completeRegistration": "Complete Registration"

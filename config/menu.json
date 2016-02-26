@@ -28,7 +28,7 @@
     "list": [{
         "type": "internal",
         "trans": "Sample page",
-        "route": "public.pages.id({ id: 2592 })",
+        "route": "public.pages.id({ id: 2 })",
         "icon": "icon ion-android-document"
     }, {
         "type": "internal",
@@ -130,6 +130,21 @@
 }, {
     "type": "internal",
     "trans": "About (page)",
-    "route": "public.pages.id({ id: 2596 })",
+    "route": "public.pages.id({ id: 2 })",
     "icon": "icon ion-information"
+}, {
+    "type": "internal",
+    "trans": "menu.login",
+    "route": "auth.login",
+    "icon": "icon ion-log-in"
+}, {
+  "type": "internal",
+  "trans": "menu.logout",
+  "route": "auth.login",
+  "icon": "icon ion-log-out"
+}, {
+    "type": "internal",
+    "trans": "menu.register",
+    "route": "auth.register",
+    "icon": "icon ion-person-add"
 }]

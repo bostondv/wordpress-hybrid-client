@@ -37,7 +37,7 @@
 # MENU
 "menu":
     "defaultState":
-        "state": "public.posts"
+        "state": "public.pages"
         "params": {}
     "exposeAsideWhen": "(min-width:900px)"
 
