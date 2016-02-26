@@ -1,4 +1,1 @@
-*
-!config.default.cson
-!.gitignore
-!config.cson
+config.default.cson
