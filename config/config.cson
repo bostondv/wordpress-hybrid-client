@@ -37,7 +37,7 @@
 # MENU
 "menu":
     "defaultState":
-        "state": "public.pages"
+        "state": "auth.login"
         "params": {}
     "exposeAsideWhen": "(min-width:900px)"
 
