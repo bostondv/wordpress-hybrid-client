@@ -134,17 +134,7 @@
     "icon": "icon ion-information"
 }, {
     "type": "internal",
-    "trans": "menu.login",
-    "route": "auth.login",
-    "icon": "icon ion-log-in"
-}, {
-  "type": "internal",
-  "trans": "menu.logout",
-  "route": "auth.login",
-  "icon": "icon ion-log-out"
-}, {
-    "type": "internal",
-    "trans": "menu.register",
-    "route": "auth.register",
-    "icon": "icon ion-person-add"
+    "trans": "menu.logout",
+    "route": "auth.logout",
+    "icon": "icon ion-log-out"
 }]
