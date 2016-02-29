@@ -33,10 +33,10 @@
                                 <input type="email" name="email" placeholder="Email Address" ng-model="registerCtrl.profile.email" required>
                             </label>
                             <label class="item item-input">
-                                <input type="text" name="firstName" placeholder="First Name" ng-model="registerCtrl.profile.firstName" required>
+                                <input type="text" name="firstName" placeholder="First Name" ng-model="registerCtrl.profile.first_name" required>
                             </label>
                             <label class="item item-input">
-                                <input type="text" name="lastName" placeholder="Last Name" ng-model="registerCtrl.profile.lastName" required>
+                                <input type="text" name="lastName" placeholder="Last Name" ng-model="registerCtrl.profile.last_name" required>
                             </label>
                             <label class="item item-input">
                                 <input type="text" name="password" placeholder="Password" ng-if="registerCtrl.showPassword" ng-model="registerCtrl.profile.password" required>
@@ -54,19 +54,19 @@
                         <p>
                             What's your job title? Select the best match.
                         </p>
-                        <ion-radio ng-model="registerCtrl.profile.jobTitle" ng-value="'safety_manager'" name="joinTitle" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'safety_manager'" name="joinTitle" required>
                             Safety Manager
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.jobTitle" ng-value="'foreman_supervisor'" name="joinTitle" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'foreman_supervisor'" name="joinTitle" required>
                             Foreman / Supervisor
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.jobTitle" ng-value="'tradesperson'" name="joinTitle" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'tradesperson'" name="joinTitle" required>
                             Tradesperson
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.jobTitle" ng-value="'owner_operator'" name="joinTitle" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'owner_operator'" name="joinTitle" required>
                             Owner / Operator
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.jobTitle" ng-value="'training_provider'" name="joinTitle" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'training_provider'" name="joinTitle" required>
                             Training Provider
                         </ion-radio>
                     </div>
@@ -76,22 +76,22 @@
                         <p>
                             Select your trade:
                         </p>
-                        <ion-radio ng-model="registerCtrl.profile.trade" ng-value="'general_contractor'" name="trade" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'general_contractor'" name="trade" required>
                             General Contractor
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.trade" ng-value="'carpenter'" name="trade" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'carpenter'" name="trade" required>
                             Carpenter
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.trade" ng-value="'roofer'" name="trade" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'roofer'" name="trade" required>
                             Roofer
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.trade" ng-value="'electrician'" name="trade" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'electrician'" name="trade" required>
                             Electrician
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.trade" ng-value="'plumbing_hvac'" name="trade" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'plumbing_hvac'" name="trade" required>
                             Plumbing / HVAC
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.trade" ng-value="'other'" name="trade" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'other'" name="trade" required>
                             Other
                         </ion-radio>
                     </div>
@@ -101,19 +101,19 @@
                         <p>
                             Company size:
                         </p>
-                        <ion-radio ng-model="registerCtrl.profile.companySize" ng-value="'10_below'" name="companySize" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'10_below'" name="companySize" required>
                             10 Workers or Less
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.companySize" ng-value="'11_25'" name="companySize" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'11_25'" name="companySize" required>
                             11 - 25 Workers
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.companySize" ng-value="'26_49'" name="companySize" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'26_49'" name="companySize" required>
                             26 - 49 Workers
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.companySize" ng-value="'50_99'" name="companySize" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'50_99'" name="companySize" required>
                             50 - 99 Workers
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.companySize" ng-value="'100_above'" name="companySize" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'100_above'" name="companySize" required>
                             100 Workers or More
                         </ion-radio>
                     </div>
