@@ -9,3 +9,18 @@
         height: 100%;
     }
 }
+
+label.item.has-error {
+    border-bottom: 2px solid red;
+}
+
+.form-errors {
+    margin: ($content-padding / 2) 0;
+}
+
+.form-error {
+    @include font-shorthand($font-size-base, normal, $line-height-base);
+    color: $assertive;
+    margin-bottom: ($content-padding / 2);
+    padding: 2px 0 2px 16px;
+}

@@ -1,5 +1,5 @@
 <ion-view>
-    <ion-nav-title>{{'register.title' | translate}}</ion-nav-title>
+    <ion-nav-title>{{'auth.register.title' | translate}}</ion-nav-title>
     <ion-content class="wphc-register has-footer">
         <form name="registerCtrl.form">
             <ion-slides options="registerCtrl.sliderOptions" slider="data.slider" class="swiper-no-swiping">
@@ -29,19 +29,33 @@
                             Create your Profile. Enter your information in the fields below.
                         </p>
                         <div class="list">
-                            <label class="item item-input">
+                            <label class="item item-input" ng-class="{'has-error': registerCtrl.form.email.$dirty && registerCtrl.form.email.$invalid}">
                                 <input type="email" name="email" placeholder="Email Address" ng-model="registerCtrl.profile.email" required>
                             </label>
-                            <label class="item item-input">
+                            <div class="form-errors" ng-if="registerCtrl.form.email.$dirty && registerCtrl.form.email.$invalid" ng-messages="registerCtrl.form.email.$error">
+                                <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
+                                <div class="form-error" ng-message="email">{{'auth.form.email' | translate}}</div>
+                            </div> 
+                            <label class="item item-input" ng-class="{'has-error': registerCtrl.form.firstName.$dirty && registerCtrl.form.firstName.$invalid}">
                                 <input type="text" name="firstName" placeholder="First Name" ng-model="registerCtrl.profile.first_name" required>
                             </label>
-                            <label class="item item-input">
+                            <div class="form-errors" ng-if="registerCtrl.form.firstName.$dirty && registerCtrl.form.firstName.$invalid" ng-messages="registerCtrl.form.firstName.$error">
+                                <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
+                            </div> 
+                            <label class="item item-input" ng-class="{'has-error': registerCtrl.form.lastName.$dirty && registerCtrl.form.lastName.$invalid}">
                                 <input type="text" name="lastName" placeholder="Last Name" ng-model="registerCtrl.profile.last_name" required>
                             </label>
-                            <label class="item item-input">
-                                <input type="text" name="password" placeholder="Password" ng-if="registerCtrl.showPassword" ng-model="registerCtrl.profile.password" required>
-                                <input type="password" name="password" placeholder="Password" ng-if="!registerCtrl.showPassword" ng-model="registerCtrl.profile.password" required>
+                            <div class="form-errors" ng-if="registerCtrl.form.lastName.$dirty && registerCtrl.form.lastName.$invalid" ng-messages="registerCtrl.form.lastName.$error">
+                                <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
+                            </div>
+                            <label class="item item-input" ng-class="{'has-error': registerCtrl.form.password.$dirty && registerCtrl.form.password.$invalid}">
+                                <input type="password" name="password" placeholder="Password" ng-if="!registerCtrl.showPassword" ng-model="registerCtrl.profile.password" required minlength="8">
+                                <input type="text" name="password" placeholder="Password" ng-if="registerCtrl.showPassword" ng-model="registerCtrl.profile.password" required minlength="8">
                             </label>
+                            <div class="form-errors" ng-if="registerCtrl.form.password.$dirty && registerCtrl.form.password.$invalid" ng-messages="registerCtrl.form.password.$error">
+                                <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
+                                <div class="form-error" ng-message="minlength">{{'auth.form.passwordMinlength' | translate}}</div>
+                            </div> 
                             <ion-checkbox ng-model="registerCtrl.showPassword">Show password</ion-checkbox>
                         </div>
                         <p>
@@ -122,11 +136,11 @@
         </form>
     </ion-content>
     <ion-footer-bar align-title="center" class="bar-positive">
-        <div class="button-bar" ng-if="!registerCtrl.slider.isEnd">
-            <button type="button" class="button button-clear" ng-click="registerCtrl.next()">{{'register.nextStep' | translate}}</button>
-        </div>
-        <div class="button-bar" ng-if="registerCtrl.slider.isEnd">
-            <button type="button" class="button button-clear" ng-click="registerCtrl.register()" >{{'register.completeRegistration' | translate}}</button>
+        <div class="button-bar">
+            <button type="button" class="button button-clear" ng-click="registerCtrl.next()" >
+                <span ng-if="!registerCtrl.slider.isEnd">{{'auth.register.nextStep' | translate}}</span>
+                <span ng-if="registerCtrl.slider.isEnd">{{'auth.register.completeRegistration' | translate}}</span>
+            </button>
         </div>
     </ion-footer-bar>
 </ion-view>

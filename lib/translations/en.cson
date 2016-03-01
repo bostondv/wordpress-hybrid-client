@@ -89,10 +89,15 @@
     "large": "Large"
     "x-large": "Xlarge"
     "xx-large": "XXlarge"
-"login":
-    "title": "Login"
-    "submit": "Login"
-"register":
-    "title": "Register"
-    "nextStep": "Continue"
-    "completeRegistration": "Complete Registration"
+"auth":
+    "form":
+        "required": "This field is required."
+        "email": "Invalid email addresss."
+        "passwordMinlength": "Password must be at least 8 characters."
+    "login":
+        "title": "Login"
+        "submit": "Login"
+    "register":
+        "title": "Register"
+        "nextStep": "Continue"
+        "completeRegistration": "Complete Registration"
