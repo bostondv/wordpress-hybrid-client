@@ -135,6 +135,6 @@
 }, {
     "type": "internal",
     "trans": "menu.logout",
-    "route": "auth.logout",
+    "route": "auth.unauth",
     "icon": "icon ion-log-out"
 }]

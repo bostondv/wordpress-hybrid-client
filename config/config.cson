@@ -5,8 +5,15 @@
     "baseUrl": "http://nationalsafetystanddown.dev/wp-json",
     "timeout": 30000
     "maxAttempt": 3
+    
+# AUTH
+"auth":
+    "requireAuth": true
     "user": "admin"
     "password": "admin"
+    "defaultState":
+        "state": "auth.login"
+        "params": {}
 
 # IONIC
 "ionicConfig":
@@ -37,7 +44,7 @@
 # MENU
 "menu":
     "defaultState":
-        "state": "auth.login"
+        "state": "public.pages"
         "params": {}
     "exposeAsideWhen": "(min-width:900px)"
 
