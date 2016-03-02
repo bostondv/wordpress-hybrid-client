@@ -2,18 +2,20 @@
     <ion-nav-title>{{'auth.login.title' | translate}}</ion-nav-title>
     <form name="loginCtrl.form" ng-submit="loginCtrl.login()" novalidate>
         <ion-content class="wphc-login padding has-footer">
+            <p class="assertive" ng-if="loginCtrl.error && loginCtrl.form.$submitted">
+                {{ loginCtrl.error }}
+            </p>
             <div class="list card">
-                <div class="item item-text-wrap">
-                    (Logo)
-                </div>
                 <label class="item item-input" ng-class="{'has-error': loginCtrl.form.username.$dirty && loginCtrl.form.username.$invalid}">
-                    <input type="text" name="username" placeholder="Username / Email Address" ng-model="loginCtrl.auth.username" required>
+                    <span class="input-label">Email Address</span>
+                    <input type="text" name="username" ng-model="loginCtrl.auth.username" required>
                 </label>
                 <div class="form-errors" ng-if="loginCtrl.form.username.$dirty && loginCtrl.form.username.$invalid" ng-messages="loginCtrl.form.username.$error">
                     <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
                 </div> 
                 <label class="item item-input" ng-class="{'has-error': loginCtrl.form.password.$dirty && loginCtrl.form.password.$invalid}">
-                    <input type="password" name="password" placeholder="Password" ng-model="loginCtrl.auth.password" required>
+                    <span class="input-label">Password</span>
+                    <input type="password" name="password" ng-model="loginCtrl.auth.password" required>
                 </label>
                 <div class="form-errors" ng-if="loginCtrl.form.password.$dirty && loginCtrl.form.password.$invalid" ng-messages="loginCtrl.form.password.$error">
                     <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
@@ -22,7 +24,7 @@
         </ion-content>
         <ion-footer-bar align-title="center" class="bar-positive">
             <div class="button-bar">
-                <button type="submit" class="button button-clear">{{'auth.login.submit' | translate}}</button>
+                <button type="submit" class="button button-clear" ng-disabled="loginCtrl.processing">{{'auth.login.submit' | translate}}</button>
             </div>
         </ion-footer-bar>
     </form>
