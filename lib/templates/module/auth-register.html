@@ -65,7 +65,7 @@
                                 <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
                                 <div class="form-error" ng-message="minlength">{{'auth.form.passwordMinlength' | translate}}</div>
                             </div>
-                            <ion-checkbox ng-model="registerCtrl.profile.meta.cpwr_mailing_list" name="cpwrMailingList">Join the CPWR Mailing List</ion-checkbox>
+                            <ion-checkbox ng-model="registerCtrl.profile.meta._cpwr_mailing_list" name="cpwrMailingList" ng-true-value="'yes'" ng-false-value="'no'">Join the CPWR Mailing List</ion-checkbox>
                         </div>
                         <p>
                             By creating an account, you accept our <a ui-sref="auth.page({id: 15})">Terms of Service</a>.
@@ -78,7 +78,7 @@
                             What's your job title? Select the best match.
                         </p>
                         <div class="list" ng-class="{'has-error': registerCtrl.form.$submitted && registerCtrl.form.jobTitle.$invalid}">
-                            <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="item.value" name="jobTitle" ng-required="!registerCtrl.profile.meta.job_title" ng-repeat="item in registerCtrl.fields.jobTitle track by item.value">
+                            <ion-radio ng-model="registerCtrl.profile.meta._job_title" ng-value="item.value" name="jobTitle" ng-required="!registerCtrl.profile.meta._job_title" ng-repeat="item in registerCtrl.fields.jobTitle track by item.value">
                                 {{ item.name }}
                             </ion-radio>
                         </div>
@@ -93,7 +93,7 @@
                             Select your trade:
                         </p>
                         <div class="list" ng-class="{'has-error': registerCtrl.form.$submitted && registerCtrl.form.trade.$invalid}">
-                            <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="item.value" name="trade" ng-required="!registerCtrl.profile.meta.trade" ng-repeat="item in registerCtrl.fields.trade track by item.value">
+                            <ion-radio ng-model="registerCtrl.profile.meta._trade" ng-value="item.value" name="trade" ng-required="!registerCtrl.profile.meta._trade" ng-repeat="item in registerCtrl.fields.trade track by item.value">
                                 {{ item.name }}
                             </ion-radio>
                         </div>
@@ -108,7 +108,7 @@
                             Company size:
                         </p>
                         <div class="list" ng-class="{'has-error': registerCtrl.form.$submitted && registerCtrl.form.companySize.$invalid}">
-                            <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="item.value" name="companySize" ng-required="!registerCtrl.profile.meta.company_size" ng-repeat="item in registerCtrl.fields.companySize track by item.value">
+                            <ion-radio ng-model="registerCtrl.profile.meta._company_size" ng-value="item.value" name="companySize" ng-required="!registerCtrl.profile.meta._company_size" ng-repeat="item in registerCtrl.fields.companySize track by item.value">
                                 {{ item.name }}
                             </ion-radio>
                         </div>
