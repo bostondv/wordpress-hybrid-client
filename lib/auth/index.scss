@@ -10,8 +10,18 @@
     }
 }
 
-label.item.has-error {
-    border-bottom: 2px solid red;
+.item,
+.list {
+    &.has-error {
+        border-bottom: 2px solid red;
+        > .item:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.list + .form-errors {
+    margin-top: -$content-padding;
 }
 
 .form-errors {

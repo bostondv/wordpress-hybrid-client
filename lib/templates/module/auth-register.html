@@ -25,38 +25,41 @@
                 </ion-slide-page>
                 <ion-slide-page>
                     <div class="padding">
+                        <p class="assertive" ng-if="registerCtrl.form.$invalid && registerCtrl.form.$submitted">
+                            {{ 'auth.register.formErrors' | translate }}
+                        </p>
                         <p>
                             Create your Profile. Enter your information in the fields below.
                         </p>
                         <div class="list">
-                            <label class="item item-input" ng-class="{'has-error': registerCtrl.form.email.$dirty && registerCtrl.form.email.$invalid}">
+                            <label class="item item-input" ng-class="{'has-error': (registerCtrl.form.$submitted || registerCtrl.form.email.$dirty) && registerCtrl.form.email.$invalid}">
                                 <input type="email" name="email" placeholder="Email Address" ng-model="registerCtrl.profile.email" required>
                             </label>
-                            <div class="form-errors" ng-if="registerCtrl.form.email.$dirty && registerCtrl.form.email.$invalid" ng-messages="registerCtrl.form.email.$error">
+                            <div class="form-errors" ng-if="(registerCtrl.form.$submitted || registerCtrl.form.email.$dirty) && registerCtrl.form.email.$invalid" ng-messages="registerCtrl.form.email.$error">
                                 <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
                                 <div class="form-error" ng-message="email">{{'auth.form.email' | translate}}</div>
                             </div> 
-                            <label class="item item-input" ng-class="{'has-error': registerCtrl.form.firstName.$dirty && registerCtrl.form.firstName.$invalid}">
+                            <label class="item item-input" ng-class="{'has-error': (registerCtrl.form.$submitted || registerCtrl.form.firstName.$dirty) && registerCtrl.form.firstName.$invalid}">
                                 <input type="text" name="firstName" placeholder="First Name" ng-model="registerCtrl.profile.first_name" required>
                             </label>
-                            <div class="form-errors" ng-if="registerCtrl.form.firstName.$dirty && registerCtrl.form.firstName.$invalid" ng-messages="registerCtrl.form.firstName.$error">
+                            <div class="form-errors" ng-if="(registerCtrl.form.$submitted || registerCtrl.form.firstName.$dirty) && registerCtrl.form.firstName.$invalid" ng-messages="registerCtrl.form.firstName.$error">
                                 <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
                             </div> 
-                            <label class="item item-input" ng-class="{'has-error': registerCtrl.form.lastName.$dirty && registerCtrl.form.lastName.$invalid}">
+                            <label class="item item-input" ng-class="{'has-error': (registerCtrl.form.$submitted || registerCtrl.form.lastName.$dirty) && registerCtrl.form.lastName.$invalid}">
                                 <input type="text" name="lastName" placeholder="Last Name" ng-model="registerCtrl.profile.last_name" required>
                             </label>
-                            <div class="form-errors" ng-if="registerCtrl.form.lastName.$dirty && registerCtrl.form.lastName.$invalid" ng-messages="registerCtrl.form.lastName.$error">
+                            <div class="form-errors" ng-if="(registerCtrl.form.$submitted || registerCtrl.form.lastName.$dirty) && registerCtrl.form.lastName.$invalid" ng-messages="registerCtrl.form.lastName.$error">
                                 <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
                             </div>
-                            <label class="item item-input" ng-class="{'has-error': registerCtrl.form.password.$dirty && registerCtrl.form.password.$invalid}">
+                            <div class="item item-input" ng-class="{'has-error': (registerCtrl.form.$submitted || registerCtrl.form.password.$dirty) && registerCtrl.form.password.$invalid}">
                                 <input type="password" name="password" placeholder="Password" ng-if="!registerCtrl.showPassword" ng-model="registerCtrl.profile.password" required minlength="8">
                                 <input type="text" name="password" placeholder="Password" ng-if="registerCtrl.showPassword" ng-model="registerCtrl.profile.password" required minlength="8">
-                            </label>
-                            <div class="form-errors" ng-if="registerCtrl.form.password.$dirty && registerCtrl.form.password.$invalid" ng-messages="registerCtrl.form.password.$error">
+                                <button type="button" class="button button-small button-icon icon" ng-click="registerCtrl.showPassword = !registerCtrl.showPassword" ng-class="{'ion-eye': !registerCtrl.showPassword, 'ion-eye-disabled': registerCtrl.showPassword}" ng-attr-title="{{registerCtrl.showPassword ? 'Hide Password' : 'Show Password'}}"></button>
+                            </div>
+                            <div class="form-errors" ng-if="(registerCtrl.form.$submitted || registerCtrl.form.password.$dirty) && registerCtrl.form.password.$invalid" ng-messages="registerCtrl.form.password.$error">
                                 <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
                                 <div class="form-error" ng-message="minlength">{{'auth.form.passwordMinlength' | translate}}</div>
-                            </div> 
-                            <ion-checkbox ng-model="registerCtrl.showPassword">Show password</ion-checkbox>
+                            </div>
                         </div>
                         <p>
                             By creating an account, you accept our <a ui-sref="auth.page({id: 15})">Terms of Service</a>.
@@ -68,21 +71,26 @@
                         <p>
                             What's your job title? Select the best match.
                         </p>
-                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'safety_manager'" name="joinTitle" required>
-                            Safety Manager
-                        </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'foreman_supervisor'" name="joinTitle" required>
+                        <div class="list" ng-class="{'has-error': registerCtrl.form.$submitted && registerCtrl.form.jobTitle.$invalid}">
+                            <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="item.value" name="jobTitle" ng-required="!registerCtrl.profile.meta.job_title" ng-repeat="item in registerCtrl.fields.jobTitle track by item.value">
+                                {{ item.name }}
+                            </ion-radio>
+                        </div>
+                        <div class="form-errors" ng-if="registerCtrl.form.$submitted && registerCtrl.form.jobTitle.$invalid" ng-messages="registerCtrl.form.jobTitle.$error">
+                            <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
+                        </div>
+                        <!-- <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'foreman_supervisor'" name="jobTitle" required>
                             Foreman / Supervisor
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'tradesperson'" name="joinTitle" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'tradesperson'" name="jobTitle" required>
                             Tradesperson
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'owner_operator'" name="joinTitle" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'owner_operator'" name="jobTitle" required>
                             Owner / Operator
                         </ion-radio>
-                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'training_provider'" name="joinTitle" required>
+                        <ion-radio ng-model="registerCtrl.profile.meta.job_title" ng-value="'training_provider'" name="jobTitle" required>
                             Training Provider
-                        </ion-radio>
+                        </ion-radio> -->
                     </div>
                 </ion-slide-page>
                 <ion-slide-page>
@@ -90,7 +98,15 @@
                         <p>
                             Select your trade:
                         </p>
-                        <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'general_contractor'" name="trade" required>
+                        <div class="list" ng-class="{'has-error': registerCtrl.form.$submitted && registerCtrl.form.trade.$invalid}">
+                            <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="item.value" name="trade" ng-required="!registerCtrl.profile.meta.trade" ng-repeat="item in registerCtrl.fields.trade track by item.value">
+                                {{ item.name }}
+                            </ion-radio>
+                        </div>
+                        <div class="form-errors" ng-if="registerCtrl.form.$submitted && registerCtrl.form.trade.$invalid" ng-messages="registerCtrl.form.trade.$error">
+                            <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
+                        </div>
+                        <!-- <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'general_contractor'" name="trade" required>
                             General Contractor
                         </ion-radio>
                         <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'carpenter'" name="trade" required>
@@ -107,7 +123,7 @@
                         </ion-radio>
                         <ion-radio ng-model="registerCtrl.profile.meta.trade" ng-value="'other'" name="trade" required>
                             Other
-                        </ion-radio>
+                        </ion-radio> -->
                     </div>
                 </ion-slide-page>
                 <ion-slide-page>
@@ -115,7 +131,15 @@
                         <p>
                             Company size:
                         </p>
-                        <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'10_below'" name="companySize" required>
+                        <div class="list" ng-class="{'has-error': registerCtrl.form.$submitted && registerCtrl.form.companySize.$invalid}">
+                            <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="item.value" name="companySize" ng-required="!registerCtrl.profile.meta.company_size" ng-repeat="item in registerCtrl.fields.companySize track by item.value">
+                                {{ item.name }}
+                            </ion-radio>
+                        </div>
+                        <div class="form-errors" ng-if="registerCtrl.form.$submitted && registerCtrl.form.companySize.$invalid" ng-messages="registerCtrl.form.companySize.$error">
+                            <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
+                        </div>
+                        <!-- <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'10_below'" name="companySize" required>
                             10 Workers or Less
                         </ion-radio>
                         <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'11_25'" name="companySize" required>
@@ -129,7 +153,7 @@
                         </ion-radio>
                         <ion-radio ng-model="registerCtrl.profile.meta.company_size" ng-value="'100_above'" name="companySize" required>
                             100 Workers or More
-                        </ion-radio>
+                        </ion-radio> -->
                     </div>
                 </ion-slide-page>
             </ion-slides>

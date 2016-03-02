@@ -101,3 +101,4 @@
         "title": "Register"
         "nextStep": "Continue"
         "completeRegistration": "Complete Registration"
+        "formErrors": "Errors were found in your registration, please correct all fields marked."
