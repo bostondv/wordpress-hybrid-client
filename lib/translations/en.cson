@@ -24,6 +24,7 @@
     "login": "Login"
     "logout": "Logout"
     "register": "Register"
+    "postStandDown": "Post a Stand Down"
 "pushNotifications":
     "newContent":
         "title": "New content!"
