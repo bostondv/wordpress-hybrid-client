@@ -7,6 +7,7 @@ mod.run(($templateCache) => {
     // to register this overwritten template uncomment the corresponding line below
     // and make sure the path point to your file:
     // $templateCache.put(<partYouShouldNotModify>, require('!html!<path>'));
+    $templateCache.put('compose/stand_down.html', require('!html!./compose/stand_down.html'));
 
     // Modules
     // $templateCache.put('module/posts/item.html', require('!html!./module/posts-item.html'));

@@ -10,6 +10,7 @@ require './font/font.coffee'
 require 'ionic-native-transitions'
 require 'expose?_!lodash'
 require 'wp-api-angularjs'
+require 'ng-mask/dist/ngMask.js'
 require './config.js'
 overwriteModule = require '../config/index.js'
 customPostsModule = require './customPosts/index.js'
@@ -28,6 +29,7 @@ bookmarkModule = require './bookmark/index.js'
 accessibilityModule = require './accessibility/index.js'
 loadingModule = require './loading/index.js'
 authModule = require './auth/index.js'
+composeModule = require './compose/index.js'
 
 # Style entry point
 require './scss/bootstrap'
@@ -41,6 +43,7 @@ module.exports = app = angular.module 'wordpress-hybrid-client', [
     'wp-api-angularjs'
     'angular-cache'
     'angularMoment'
+    'ngMask'
     customPostsModule
     filtersModule
     pagesModule
@@ -55,6 +58,7 @@ module.exports = app = angular.module 'wordpress-hybrid-client', [
     accessibilityModule
     loadingModule
     authModule
+    composeModule
     require('./cordova/cordova.module').name
     require('./cacheImg/cacheImg.module').name
     require('./syntaxHighlighter/syntaxHighlighter.module').name

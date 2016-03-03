@@ -144,6 +144,12 @@
     "cache":
         "capacity": 25
         "maxAge": 86400000
+        
+# COMPOSE
+"compose":
+    "cache":
+        "capacity": 25
+        "maxAge": 86400000
 
 # TRANSLATIONS
 "translation":

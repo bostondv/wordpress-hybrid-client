@@ -31,7 +31,7 @@
 }, {
     "type": "internal",
     "trans": "menu.postStandDown",
-    "route": "public.pages.id({ id: 2 })",
+    "route": "public.compose({ type: 'stand_down' })",
     "icon": "icon ion-compose"
 }, {
     "type": "internal",

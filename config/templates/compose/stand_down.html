@@ -1,0 +1,52 @@
+<div class="post padding">
+    <form name="composeItemCtrl.form" ng-submit="composeItemCtrl.submit()" novalidate>
+        <p>
+            Share your Stand Down activity by completing the fields below.
+        </p>
+        <div class="list">
+            <label class="item item-input item-stacked-label" ng-class="{'has-error': (composeItemCtrl.form.$submitted || composeItemCtrl.form.date.$dirty) && composeItemCtrl.form.date.$invalid}">
+                <span class="input-label">Date of Your Stand Down</span>
+                <input type="text" name="date" ng-model="composeItemCtrl.item.meta._date" placeholder="YYYY-MM-DD" mask="1999-1?9-3?9" required>
+            </label>
+            <div class="form-errors" ng-if="(composeItemCtrl.form.$submitted || composeItemCtrl.form.date.$dirty) && composeItemCtrl.form.date.$invalid" ng-messages="composeItemCtrl.form.date.$error">
+                <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
+                <div class="form-error" ng-message="mask">{{'compose.form.invalidDate' | translate}}</div>
+            </div> 
+            <div class="item item-input item-stacked-label">
+                <span class="input-label">Number of Attendees ({{ composeItemCtrl.item.meta._attendees }})</span>
+                <div class="range">
+                    <input type="range" name="range" ng-model="composeItemCtrl.item.meta._attendees" min="1" max="100">
+                </div>
+            </div>
+            <label class="item item-input item-stacked-label" ng-class="{'has-error': (composeItemCtrl.form.$submitted || composeItemCtrl.form.notes.$dirty) && composeItemCtrl.form.notes.$invalid}">
+                <span class="input-label">Notes</span>
+                <textarea name="notes" placeholder="Enter a brief description of your activity"  ng-model="composeItemCtrl.item.content" required></textarea>
+            </label>
+            <div class="form-errors" ng-if="(composeItemCtrl.form.$submitted || composeItemCtrl.form.notes.$dirty) && composeItemCtrl.form.notes.$invalid" ng-messages="composeItemCtrl.form.notes.$error">
+                <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
+            </div> 
+            <div class="item">
+                <p>
+                    Choose photos to add to your post
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="button button-block button-stable icon-left ion-images">
+                            Gallery
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="button button-block button-stable icon-left ion-camera">
+                            Take Picture
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <button type="submit" class="button button-block button-positive">
+                    Post Stand Down
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
