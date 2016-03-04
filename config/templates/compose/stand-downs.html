@@ -7,10 +7,10 @@
             Share your Stand Down activity by completing the fields below.
         </p>
         <div class="list">
-            <label class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid}">
+            <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid}">
                 <span class="input-label">Date of Your Stand Down</span>
                 <input type="text" name="date" ng-model="composeCtrl.item.meta._date" placeholder="YYYY-MM-DD" mask="1999-1?9-3?9" required>
-            </label>
+            </div>
             <div class="form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid" ng-messages="composeCtrl.form.date.$error">
                 <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
                 <div class="form-error" ng-message="mask">{{'compose.form.invalidDate' | translate}}</div>
@@ -21,17 +21,17 @@
                     <input type="range" name="range" ng-model="composeCtrl.item.meta._attendees" min="1" max="100">
                 </div>
             </div>
-            <label class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid}">
+            <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid}">
                 <span class="input-label">Title</span>
                 <input type="text" name="title" ng-model="composeCtrl.item.title" placeholder="Title to summarize this activity" required>
-            </label>
+            </div>
             <div class="form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid" ng-messages="composeCtrl.form.title.$error">
                 <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
             </div> 
-            <label class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid}">
+            <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid}">
                 <span class="input-label">Notes</span>
                 <textarea name="notes" placeholder="Enter a brief description of your activity"  ng-model="composeCtrl.item.content" required></textarea>
-            </label>
+            </div>
             <div class="form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid" ng-messages="composeCtrl.form.notes.$error">
                 <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
             </div> 
