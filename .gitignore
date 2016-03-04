@@ -40,7 +40,6 @@ about.md
 iOS
 cordova.plugin.backup
 before_build.md
-/config.xml
 
 # v1 compatibility
 /config.scss
