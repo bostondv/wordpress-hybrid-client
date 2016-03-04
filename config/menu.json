@@ -31,7 +31,7 @@
 }, {
     "type": "internal",
     "trans": "menu.postStandDown",
-    "route": "public.compose({ type: 'stand_down' })",
+    "route": "public.compose({ slug: 'stand-downs' })",
     "icon": "icon ion-compose"
 }, {
     "type": "internal",

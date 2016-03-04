@@ -1,8 +1,6 @@
 <ion-view>
-    <ion-nav-title>{{ composeCtrl.postType.name | translate}}</ion-nav-title>
+    <ion-nav-title>{{ composeCtrl.title | translate}}</ion-nav-title>
     <ion-content>
-        <wphc-loader ng-if="!composeCtrl.postType" on-load="composeCtrl.init()"></wphc-loader>
-        <ion-refresher pulling-text="{{ 'pullToRefresh' | translate}}" on-refresh="composeCtrl.refresh()"></ion-refresher>
-        <wphc-compose-item item="composeCtrl.item" type="{{composeCtrl.postTypeName}}" ng-if="composeCtrl.postType"></wphc-compose-item>
+        <div ng-include="composeCtrl.templateUrl" ng-if="composeCtrl.slug"></div>
     </ion-content>
 </ion-view>
