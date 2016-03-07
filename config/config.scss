@@ -10,3 +10,17 @@ $palette-accent-color: #009688 !default;
 $palette-secondary-text: #727272 !default;
 $palette-divider-color: #EAEAEA !default;
 $bar-height: 64px !default;
+
+.item-credits {
+    text-align: center;
+    p {
+        opacity: .5;
+        font-size: .7em;
+    }
+}
+
+.list.card {
+    .item.item-author {
+        border-top: 1px solid $palette-divider-color;
+    }
+}

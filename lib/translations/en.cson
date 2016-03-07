@@ -37,13 +37,13 @@
 "tags":
     "title": "Tags"
 "tag":
-    "title": "Tag: {{name}}"
+    "title": "{{name}}"
 "customTaxonomy":
     "title": "{{term}}: {{name}}"
 "categories":
     "title": "Categories"
 "category":
-    "title": "Category: {{name}}"
+    "title": "{{name}}"
 "home":
     "title": "Home"
 "search":
@@ -55,7 +55,7 @@
 "authors":
     "title": "Authors"
 "author":
-    "title": "Author: {{name}}"
+    "title": "{{name}}"
 "pages":
     "title": "Pages"
 "posts":
