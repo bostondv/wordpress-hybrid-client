@@ -2,6 +2,18 @@
     display: none;
 }
 
+.form-errors {
+    @include font-shorthand($font-size-base, normal, $line-height-base);
+    color: $assertive;
+    background-color: rgba($assertive, 0.1);
+    padding-top: $content-padding;
+    padding-bottom: $content-padding;
+}
+
+.form-error {
+
+}
+
 .wphc-register {
     .scroll > form,
     > form {
@@ -10,27 +22,7 @@
     }
 }
 
-.item,
-.list {
-    &.has-error {
-        border-bottom: 2px solid red;
-        > .item:last-child {
-            border-bottom: 0;
-        }
-    }
-}
-
-.list + .form-errors {
-    margin-top: -$content-padding;
-}
-
-.form-errors {
-    margin: ($content-padding / 2) 0;
-}
-
-.form-error {
-    @include font-shorthand($font-size-base, normal, $line-height-base);
-    color: $assertive;
-    margin-bottom: ($content-padding / 2);
-    padding: 2px 0 2px 16px;
+.wphc-auth {
+    background-image: url('../img/welcome-background.jpg');
+    background-size: cover;
 }

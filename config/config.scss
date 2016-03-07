@@ -1,15 +1,19 @@
 // http://www.materialpalette.com/blue-grey/teal
 // Here you can also overwrite ionic's variables
-$palette-primary-dark: #455a64 !default;
-$palette-primary-color: #607d8b !default;
-$palette-primary-light: #cfd8dc !default;
-$palette-primary-icon: #fff !default;
-$palette-primary-text: #212121 !default;;
-$palette-primary-background: white !default;
-$palette-accent-color: #009688 !default;
-$palette-secondary-text: #727272 !default;
-$palette-divider-color: #EAEAEA !default;
-$bar-height: 64px !default;
+
+$palette-primary-dark:       #F57C00;
+$palette-primary-color:      #FF9800;
+$palette-primary-light:      #FFE0B2;
+$palette-primary-icon:       #FFFFFF;
+$palette-primary-text:       #212121;
+$palette-primary-background: #FFFFFF;
+$palette-accent-color:       #FF5722;
+$palette-secondary-text:     #727272;
+$palette-divider-color:      #E4E4E4;
+
+$dark: $palette-secondary-text;
+
+$bar-height: 64px;
 
 .item-credits {
     text-align: center;
@@ -23,4 +27,12 @@ $bar-height: 64px !default;
     .item.item-author {
         border-top: 1px solid $palette-divider-color;
     }
+}
+
+.flush-top {
+    margin-top: 0 !important;
+}
+
+.flush-bottom {
+    margin-bottom: 0 !important;
 }

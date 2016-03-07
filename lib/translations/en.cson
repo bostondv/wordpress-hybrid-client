@@ -103,6 +103,8 @@
         "nextStep": "Continue"
         "completeRegistration": "Complete Registration"
         "formErrors": "Errors were found in your registration, please correct all fields marked."
+    "welcome":
+        "title": "National Safety Stand Down"
 "compose":
     "form":
         "required": "This field is required."

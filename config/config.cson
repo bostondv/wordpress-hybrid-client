@@ -12,7 +12,7 @@
     "user": "admin"
     "password": "admin"
     "defaultState":
-        "state": "auth.login"
+        "state": "auth.welcome"
         "params": {}
 
 # IONIC

@@ -1,0 +1,32 @@
+<ion-view>
+    <ion-nav-title>{{'auth.welcome.title' | translate}}</ion-nav-title>
+    <ion-content class="wphc-auth wphc-welcome">
+        <div class="list card">
+            <div class="item item-text-wrap text-center">
+                <p>
+                    <img ng-src="lib/img/logo-md.png" />
+                </p>
+            </div>
+            <div class="item item-text-wrap text-center">
+                <h2>
+                    Thanks for downloading the National Safety Stand Down app! You can use this app to:
+                </h2>
+            </div>
+            <div class="item item-text-wrap text-center">
+                <p>
+                    Get the latest Stand Down updates
+                </p>
+                <p>
+                    Review Meeting Guides &amp; Videos
+                </p>
+                <p>
+                    Post your Stand Down Activities
+                </p>
+            </div>
+            <div class="item">
+                <button type="button" class="button button-block button-positive flush-top" ui-sref="auth.register">Register Now</button>
+                <button type="button" class="button button-block button-stable flush-bottom" ui-sref="auth.login">Login</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
