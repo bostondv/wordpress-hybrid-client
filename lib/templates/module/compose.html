@@ -1,8 +1,8 @@
 <ion-view>
     <ion-nav-title>{{ composeCtrl.title | translate}}</ion-nav-title>
-    <ion-content>
-        <wphc-loader ng-if="!composeCtrl.item" on-load="composeCtrl.init()"></wphc-loader>
+    <ion-content class="padding bg-gray-lighter">
+        <wphc-loader ng-if="!composeCtrl.item || composeCtrl.loading" on-load="composeCtrl.init()"></wphc-loader>
         <ion-refresher pulling-text="{{ 'pullToRefresh' | translate}}" on-refresh="composeCtrl.refresh()"></ion-refresher>
-        <div ng-include="composeCtrl.templateUrl" ng-if="composeCtrl.slug"></div>
+        <div ng-include="composeCtrl.templateUrl" ng-if="composeCtrl.slug" ng-show="!composeCtrl.loading"></div>
     </ion-content>
 </ion-view>

@@ -1,65 +1,65 @@
-<div class="post padding">
-    <form name="composeCtrl.form" ng-submit="composeCtrl.submit()" novalidate>
-        <p ng-class="composeCtrl.message.type" ng-if="composeCtrl.message">
+<form name="composeCtrl.form" ng-submit="composeCtrl.submit()" novalidate>
+    <div class="card card-compose">
+        <div class="item item-text-wrap" ng-class="composeCtrl.message ? 'item-' + composeCtrl.message.type : ''" ng-if="composeCtrl.message">
             {{ composeCtrl.message.content }}
-        </p>
-        <p>
-            Share your Stand Down activity by completing the fields below.
-        </p>
-        <div class="list">
-            <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid}">
-                <span class="input-label">Date of Your Stand Down</span>
-                <input type="text" name="date" ng-model="composeCtrl.item.meta._date" placeholder="YYYY-MM-DD" mask="1999-1?9-3?9" required>
-            </div>
-            <div class="form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid" ng-messages="composeCtrl.form.date.$error">
-                <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
-                <div class="form-error" ng-message="mask">{{'compose.form.invalidDate' | translate}}</div>
-            </div> 
-            <div class="item item-input item-stacked-label">
-                <span class="input-label">Number of Attendees ({{ composeCtrl.item.meta._attendees }})</span>
-                <div class="range">
-                    <input type="range" name="range" ng-model="composeCtrl.item.meta._attendees" min="1" max="100">
-                </div>
-            </div>
-            <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid}">
-                <span class="input-label">Title</span>
-                <input type="text" name="title" ng-model="composeCtrl.item.title" placeholder="Title to summarize this activity" required>
-            </div>
-            <div class="form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid" ng-messages="composeCtrl.form.title.$error">
-                <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
-            </div> 
-            <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid}">
-                <span class="input-label">Notes</span>
-                <textarea name="notes" placeholder="Enter a brief description of your activity"  ng-model="composeCtrl.item.content" required></textarea>
-            </div>
-            <div class="form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid" ng-messages="composeCtrl.form.notes.$error">
-                <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
-            </div> 
-            <div class="item">
-                <p>
-                    Choose photos to add to your post
-                </p>
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="button button-block button-stable icon-left ion-images" ng-click="composeCtrl.getPicture('PHOTOLIBRARY')">
-                            Gallery
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="button button-block button-stable icon-left ion-camera" ng-click="composeCtrl.getPicture('CAMERA')">
-                            Take Picture
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="item item-image" ng-if="composeCtrl.item.featured_media">
-                <img ng-src="{{ composeCtrl.item.featured_media }}">
-            </div>
-            <div class="item">
-                <button type="submit" class="button button-block button-positive" ng-disabled="composeCtrl.processing">
-                    Post Stand Down
-                </button>
+        </div>
+        <div class="item item-text-wrap">
+            <p>
+                Share your Stand Down activity by completing the fields below.
+            </p>
+        </div>
+        <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid}">
+            <span class="input-label">Date of Your Stand Down</span>
+            <input type="text" name="date" ng-model="composeCtrl.item.meta._date" placeholder="YYYY-MM-DD" mask="1999-1?9-3?9" required>
+        </div>
+        <div class="item form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid" ng-messages="composeCtrl.form.date.$error">
+            <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
+            <div class="form-error" ng-message="mask">{{'compose.form.invalidDate' | translate}}</div>
+        </div> 
+        <div class="item item-input item-stacked-label">
+            <span class="input-label">Number of Attendees ({{ composeCtrl.item.meta._attendees }})</span>
+            <div class="range">
+                <input type="range" name="range" ng-model="composeCtrl.item.meta._attendees" min="1" max="100">
             </div>
         </div>
-    </form>
-</div>
+        <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid}">
+            <span class="input-label">Title</span>
+            <input type="text" name="title" ng-model="composeCtrl.item.title" placeholder="Title to summarize this activity" required>
+        </div>
+        <div class="item form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid" ng-messages="composeCtrl.form.title.$error">
+            <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
+        </div> 
+        <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid}">
+            <span class="input-label">Notes</span>
+            <textarea name="notes" placeholder="Enter a brief description of your activity"  ng-model="composeCtrl.item.content" required></textarea>
+        </div>
+        <div class="item form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid" ng-messages="composeCtrl.form.notes.$error">
+            <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
+        </div> 
+        <div class="item">
+            <p>
+                Choose photos to add to your post
+            </p>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="button button-block button-stable icon-left ion-images flush-top flush-bottom" ng-click="composeCtrl.getPicture('PHOTOLIBRARY')">
+                        Gallery
+                    </button>
+                </div>
+                <div class="col">
+                    <button type="button" class="button button-block button-stable icon-left ion-camera flush-top flush-bottom" ng-click="composeCtrl.getPicture('CAMERA')">
+                        Take Picture
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item item-image" ng-if="composeCtrl.item.featured_media">
+            <img ng-src="{{ composeCtrl.item.featured_media }}">
+        </div>
+        <div class="item">
+            <button type="submit" class="button button-block button-positive flush-top flush-bottom" ng-disabled="composeCtrl.processing">
+                Post Stand Down
+            </button>
+        </div>
+    </div>
+</form>
