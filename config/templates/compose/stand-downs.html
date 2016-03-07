@@ -8,9 +8,14 @@
                 Share your Stand Down activity by completing the fields below.
             </p>
         </div>
-        <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid}">
+        <div class="item item-input item-stacked-label item-button-right item-icon-left" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid}">
             <span class="input-label">Date of Your Stand Down</span>
-            <input type="text" name="date" ng-model="composeCtrl.item.meta._date" placeholder="YYYY-MM-DD" mask="1999-1?9-3?9" required>
+            <p>
+                {{ composeCtrl.item.meta._date }}
+            </p>
+            <button type="button" class="button button-stable icon-left ion-calendar" ng-click="composeCtrl.pickDate()">
+                Pick Date
+            </button>
         </div>
         <div class="item form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid" ng-messages="composeCtrl.form.date.$error">
             <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
@@ -19,7 +24,7 @@
         <div class="item item-input item-stacked-label">
             <span class="input-label">Number of Attendees ({{ composeCtrl.item.meta._attendees }})</span>
             <div class="range">
-                <input type="range" name="range" ng-model="composeCtrl.item.meta._attendees" min="1" max="100">
+                <input type="range" name="range" ng-model="composeCtrl.item.meta._attendees" min="1" max="50">
             </div>
         </div>
         <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid}">
