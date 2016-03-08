@@ -2,7 +2,7 @@
 
 # API
 "api":
-    "baseUrl": "http://nationalsafetystanddown.dev/wp-json",
+    "baseUrl": "http://staging.nationalsafetystanddown.com/wp-json",
     "timeout": 30000
     "maxAttempt": 3
     
@@ -203,7 +203,7 @@
         "windowsURL": ""
     "pushNotifications":
         "enabled": false
-        "baseUrl": "http://nationalsafetystanddown.dev/pnfw"
+        "baseUrl": "http://staging.nationalsafetystanddown.com/pnfw"
         "android":
             "senderID": ""
         "ios":
