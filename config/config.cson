@@ -202,7 +202,7 @@
         "androidURL": ""
         "windowsURL": ""
     "pushNotifications":
-        "enabled": false
+        "enabled": true
         "baseUrl": "http://staging.nationalsafetystanddown.com/pnfw"
         "android":
             "senderID": "1054295315467"
