@@ -108,7 +108,7 @@
     "org.pushandplay.cordova.apprate@1.1.7",
     "cordova-plugin-x-toast@2.1.1",
     "nl.x-services.plugins.socialsharing@4.3.19",
-    "com.ionic.keyboard@1.0.4",
+    "ionic-plugin-keyboard@1.0.8",
     "cordova-plugin-statusbar@1.0.1",
     "cordova-plugin-google-analytics@0.8.1",
     {

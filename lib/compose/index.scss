@@ -1,3 +1,7 @@
 .card-compose {
-    margin-top: 0;
+    .responsive-sm {
+        .col {
+            margin-bottom: 0;
+        }
+    }
 }

@@ -2,10 +2,10 @@
     <ion-nav-title>{{'auth.login.title' | translate}}</ion-nav-title>
     <form name="loginCtrl.form" ng-submit="loginCtrl.login()" novalidate>
         <ion-content class="wphc-auth wphc-login padding has-footer">
-            <p class="assertive" ng-if="loginCtrl.error && loginCtrl.form.$submitted">
-                {{ loginCtrl.error }}
-            </p>
-            <div class="list card">
+            <div class="card">
+                <div class="item item-text-wrap item-assertive" ng-if="loginCtrl.error && loginCtrl.form.$submitted">
+                    {{ loginCtrl.error }}
+                </div>
                 <label class="item item-input item-stacked-label" ng-class="{'has-error': loginCtrl.form.username.$dirty && loginCtrl.form.username.$invalid}">
                     <span class="input-label">Email Address</span>
                     <input type="text" name="username" ng-model="loginCtrl.auth.username" required>

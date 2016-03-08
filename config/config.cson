@@ -37,7 +37,7 @@
     "templates":
         "maxPrefetch": null
     "navBar":
-        "alignTitle": null
+        "alignTitle": 'center'
         "positionPrimaryButtons": null
         "positionSecondaryButtons": null
 
@@ -183,13 +183,13 @@
 # CORDOVA
 "cordova":
     "nativeTransitions":
-        "enabled": false
+        "enabled": true
         "defaultOptions": null
         "defaultTransition" : null
         "defaultBackTransition" : null
     "statubar":
-        "show": false
-        "color": "#455a64"
+        "show": true
+        "color": "#F57C00"
     "appRate":
         "enabled": false
         "language": "en"
@@ -202,8 +202,8 @@
         "androidURL": ""
         "windowsURL": ""
     "pushNotifications":
-        "enabled": true
-        "baseUrl": "http://nationalsafetystanddown.com/pnfw"
+        "enabled": false
+        "baseUrl": "http://nationalsafetystanddown.dev/pnfw"
         "android":
             "senderID": ""
         "ios":

@@ -105,6 +105,7 @@
         "formErrors": "Errors were found in your registration, please correct all fields marked."
     "welcome":
         "title": "National Safety Stand Down"
+    "unknownError": "An unknown error occurred. Please try again."
 "compose":
     "form":
         "required": "This field is required."
