@@ -3,6 +3,7 @@
 # API
 "api":
     "baseUrl": "http://staging.nationalsafetystanddown.com/wp-json",
+    # "baseUrl": "http://nationalsafetystanddown.dev/wp-json",
     "timeout": 30000
     "maxAttempt": 3
     

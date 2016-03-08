@@ -7,7 +7,9 @@ mod.run(($ionicPlatform, $window, $cordovaStatusbar) => {
             $window.Keyboard.shrinkView(true);
         }
         // Style light statusbar
-        $cordovaStatusbar.style(1);
+        if ($window.StatusBar) {
+            $cordovaStatusbar.style(1);
+        }
     });
 });
 
