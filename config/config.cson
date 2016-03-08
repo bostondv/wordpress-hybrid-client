@@ -183,7 +183,7 @@
 # CORDOVA
 "cordova":
     "nativeTransitions":
-        "enabled": true
+        "enabled": false
         "defaultOptions": null
         "defaultTransition" : null
         "defaultBackTransition" : null
