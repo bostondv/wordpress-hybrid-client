@@ -6,7 +6,7 @@
                 <ion-slide-page>
                     <ion-scroll class="padding">
                         <div class="card">
-                            <div class="item item-assertive" ng-if="(registerCtrl.form.$invalid || registerCtrl.error) && registerCtrl.form.$submitted">
+                            <div class="item item-assertive item-text-wrap" ng-if="(registerCtrl.form.$invalid || registerCtrl.error) && registerCtrl.form.$submitted">
                                 <span ng-if="registerCtrl.error">{{ registerCtrl.error }}</span>
                                 <span ng-if="!registerCtrl.error">{{ 'auth.register.formErrors' | translate }}</span>
                             </div>
