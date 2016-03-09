@@ -95,9 +95,11 @@
         "required": "This field is required."
         "email": "Invalid email addresss."
         "passwordMinlength": "Password must be at least 8 characters."
+        "error": "An unknown error occurred. Please try again."
     "login":
         "title": "Login"
         "submit": "Login"
+        "tokenMissing": "No token found."
     "register":
         "title": "Register"
         "nextStep": "Continue"
@@ -105,11 +107,14 @@
         "formErrors": "Errors were found in your registration, please correct all fields marked."
     "welcome":
         "title": "National Safety Stand Down"
-    "unknownError": "An unknown error occurred. Please try again."
+        "login": "Login"
+        "register": "Register Now"
 "compose":
     "form":
         "required": "This field is required."
         "invalidDate": "Invalid date."
+        "error": "An unknown error occurred. Please try again."
+        "submitted": "Post successfully submitted."
     "stand-downs":
         "title": "Post a Stand Down"
-    "unknownError": "An unknown error occurred. Please try again."
+    
