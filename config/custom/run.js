@@ -1,6 +1,6 @@
 let mod = angular.module('wordpress-hybrid-client.overwriteRun', []);
 
-mod.run(($ionicPlatform, $window, $cordovaStatusbar) => {
+mod.run(($ionicPlatform, $window, $cordovaStatusbar, $ionicHistory) => {
     $ionicPlatform.ready(() => {
         // Make shrink view
         if ($window.Keyboard) {
