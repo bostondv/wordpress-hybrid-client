@@ -24,15 +24,12 @@
 }
 
 .wphc-auth {
-    background-image: url('../img/welcome-background.jpg');
-    background-size: cover;
-    
     .item-app-logo {
         background-image: url('../img/logo-md.png');
-        background-size: 150px;
+        background-size: 130px;
         background-repeat: no-repeat;
         background-position: center;
-        height: 170px;
+        height: 150px;
     }
     
     .scroll > .card {

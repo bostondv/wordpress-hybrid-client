@@ -1,20 +1,20 @@
 <ion-view>
     <ion-nav-title>{{'auth.login.title' | translate}}</ion-nav-title>
     <form name="loginCtrl.form" ng-submit="loginCtrl.login()" novalidate>
-        <ion-content class="wphc-auth wphc-login padding has-footer">
+        <ion-content class="wphc-auth wphc-login padding has-footer bg-gray-lighter">
             <div class="card">
                 <div class="item item-text-wrap item-assertive" ng-if="loginCtrl.error && loginCtrl.form.$submitted">
                     {{ loginCtrl.error }}
                 </div>
                 <label class="item item-input item-stacked-label" ng-class="{'has-error': loginCtrl.form.username.$dirty && loginCtrl.form.username.$invalid}">
-                    <span class="input-label">Email Address</span>
+                    <span class="input-label">{{'auth.login.labels.email' | translate}}</span>
                     <input type="text" name="username" ng-model="loginCtrl.auth.username" required>
                 </label>
                 <div class="item form-errors" ng-if="loginCtrl.form.username.$dirty && loginCtrl.form.username.$invalid" ng-messages="loginCtrl.form.username.$error">
                     <div class="form-error" ng-message="required">{{'auth.form.required' | translate}}</div>
                 </div> 
                 <label class="item item-input item-stacked-label" ng-class="{'has-error': loginCtrl.form.password.$dirty && loginCtrl.form.password.$invalid}">
-                    <span class="input-label">Password</span>
+                    <span class="input-label">{{'auth.login.labels.password' | translate}}</span>
                     <input type="password" name="password" ng-model="loginCtrl.auth.password" required>
                 </label>
                 <div class="item form-errors" ng-if="loginCtrl.form.password.$dirty && loginCtrl.form.password.$invalid" ng-messages="loginCtrl.form.password.$error">

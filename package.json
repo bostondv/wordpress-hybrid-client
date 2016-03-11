@@ -77,6 +77,7 @@
     "MD5": "^1.2.1",
     "angular": "^1.4.7",
     "angular-cache": "^4.0.0",
+    "angular-fitvids": "^0.1.0",
     "angular-highlightjs": "^0.4.1",
     "angular-messages": "^1.4.7",
     "angular-moment": "^0.10.0",

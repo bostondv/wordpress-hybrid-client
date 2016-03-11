@@ -11,6 +11,7 @@ require 'ionic-native-transitions'
 require 'expose?_!lodash'
 require 'wp-api-angularjs'
 require 'ng-mask/dist/ngMask.js'
+require 'angular-fitvids'
 require './config.js'
 overwriteModule = require '../config/index.js'
 customPostsModule = require './customPosts/index.js'
@@ -44,6 +45,7 @@ module.exports = app = angular.module 'wordpress-hybrid-client', [
     'angular-cache'
     'angularMoment'
     'ngMask'
+    'fitVids'
     customPostsModule
     filtersModule
     pagesModule

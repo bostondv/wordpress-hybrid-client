@@ -3,18 +3,14 @@
         <div class="item item-text-wrap" ng-class="composeCtrl.message ? 'item-' + composeCtrl.message.type : ''" ng-if="composeCtrl.message">
             {{ composeCtrl.message.content }}
         </div>
-        <div class="item item-text-wrap">
-            <p>
-                Share your Stand Down activity by completing the fields below.
-            </p>
-        </div>
+        <div class="item item-text-wrap" translate="compose.stand-downs.intro"></div>
         <div class="item item-input item-stacked-label item-button-right item-icon-left" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid}">
-            <span class="input-label">Date</span>
+            <span class="input-label">{{'compose.labels.date' | translate}}</span>
             <p>
                 {{ composeCtrl.item.meta._date }}
             </p>
             <button type="button" class="button button-stable icon-left ion-calendar" ng-click="composeCtrl.pickDate()">
-                Pick
+                {{'compose.labels.pick' | translate}}
             </button>
         </div>
         <div class="item form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.date.$dirty) && composeCtrl.form.date.$invalid" ng-messages="composeCtrl.form.date.$error">
@@ -22,36 +18,36 @@
             <div class="form-error" ng-message="mask">{{'compose.form.invalidDate' | translate}}</div>
         </div> 
         <div class="item item-stacked-label">
-            <span class="input-label">Number of Attendees ({{ composeCtrl.item.meta._attendees }})</span>
+            <span class="input-label">{{'compose.labels.attendees' | translate}} ({{ composeCtrl.item.meta._attendees }})</span>
             <div class="range">
                 <input type="range" name="range" ng-model="composeCtrl.item.meta._attendees" min="1" max="50">
             </div>
         </div>
         <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid}">
-            <span class="input-label">Title</span>
-            <input type="text" name="title" ng-model="composeCtrl.item.title" placeholder="Title to summarize this activity" required>
+            <span class="input-label">{{'compose.labels.title' | translate}}</span>
+            <input type="text" name="title" ng-model="composeCtrl.item.title" placeholder="{{'compose.labels.titlePlaceholder' | translate}}" required>
         </div>
         <div class="item form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.title.$dirty) && composeCtrl.form.title.$invalid" ng-messages="composeCtrl.form.title.$error">
             <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
         </div> 
         <div class="item item-input item-stacked-label" ng-class="{'has-error': (composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid}">
-            <span class="input-label">Notes</span>
-            <textarea name="notes" placeholder="Enter a brief description of your activity"  ng-model="composeCtrl.item.content" required></textarea>
+            <span class="input-label">{{'compose.labels.notes' | translate}}</span>
+            <textarea name="notes" placeholder="{{'compose.labels.notesPlaceholder' | translate}}"  ng-model="composeCtrl.item.content" required></textarea>
         </div>
         <div class="item form-errors" ng-if="(composeCtrl.form.$submitted || composeCtrl.form.notes.$dirty) && composeCtrl.form.notes.$invalid" ng-messages="composeCtrl.form.notes.$error">
             <div class="form-error" ng-message="required">{{'compose.form.required' | translate}}</div>
         </div> 
         <div class="item item-stacked-label">
-            <span class="input-label">Choose photo to add...</span>
+            <span class="input-label">{{'compose.labels.photo' | translate}}</span>
             <div class="row responsive-sm">
                 <div class="col">
                     <button type="button" class="button button-block button-stable icon-left ion-images flush-top flush-bottom" ng-click="composeCtrl.getPicture('SAVEDPHOTOALBUM')">
-                        Gallery
+                        {{'compose.labels.photoGallery' | translate}}
                     </button>
                 </div>
                 <div class="col">
                     <button type="button" class="button button-block button-stable icon-left ion-camera flush-top flush-bottom" ng-click="composeCtrl.getPicture('CAMERA')">
-                        Take Picture
+                        {{'compose.labels.photoCamera' | translate}}
                     </button>
                 </div>
             </div>
@@ -61,7 +57,7 @@
         </div>
         <div class="item">
             <button type="submit" class="button button-block button-positive flush-top flush-bottom" ng-disabled="composeCtrl.processing">
-                Post Stand Down
+                {{'compose.stand-downs.submit' | translate}}
             </button>
         </div>
     </div>
