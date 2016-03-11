@@ -11,6 +11,7 @@ mod.run(($ionicPlatform, $window, $cordovaStatusbar, $ionicHistory) => {
         
         if ($window.cordova && $window.cordova.plugins.Keyboard) {
             $window.cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            $window.cordova.plugins.Keyboard.disableScroll(true);
         }
 
         // Style light statusbar

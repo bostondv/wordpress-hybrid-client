@@ -110,7 +110,7 @@
         "submit": "Complete Registration"
         "formErrors": "Errors were found in your registration, please correct all fields marked."
         "intro": "<p>We need to capture some basic info.  We’ll never release or share your info without your permission and we won’t send you unwanted communications.</p>"
-        "terms": "<p>By creating an account, you accept our <a ui-sref=\"auth.page({id: 15})\" target=\"_blank\">Terms of Service</a>.</p>"
+        "terms": "<p>By creating an account, you accept our <a ui-sref=\"auth.page({id: 3813})\">Terms of Service</a> and <a ui-sref=\"auth.page({id: 3816})\">Privacy Policy</a>.</p>"
         "labels":
             "email": "Email Address"
             "firstName": "First Name"
@@ -122,7 +122,7 @@
             "companySize": "Company size"
     "welcome":
         "title": "National Safety Stand Down"
-        "login": "Login"
+        "login": "Existing User? Login Here"
         "register": "Get Started"
         "intro": "<h2>Welcome to The National Safety Stand Down App!</h2><p>Get The Latest Stand Down Updates</p><p>Access Free Stand Down Meeting Guides & Other Helpful Resources</p><p>Share your stand down activities to show commitment to reducing falls in construction</p>"
 "compose":

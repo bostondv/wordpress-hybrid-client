@@ -2,12 +2,16 @@
     <ion-nav-title>{{'auth.welcome.title' | translate}}</ion-nav-title>
     <ion-content class="wphc-auth wphc-welcome bg-gray-lighter">
         <div class="card">
-            <div class="item item-app-logo"></div>
-            <div class="item item-text-wrap text-center" translate="auth.welcome.intro"></div>
-            <div class="item">
-                <button type="button" class="button button-block button-positive flush-top" ui-sref="auth.register">{{'auth.welcome.register' | translate}}</button>
-                <button type="button" class="button button-block button-clear button-small flush-bottom" ui-sref="auth.login">{{'auth.welcome.login' | translate}}</button>
-            </div>
+            <ion-item class="item item-app-logo"></ion-item>
+            <ion-item class="item-text-wrap text-center" translate="auth.welcome.intro"></ion-item>
+            <ion-item class="item text-center" ui-sref="auth.login">
+                {{'auth.welcome.login' | translate}}
+            </ion-item>
         </div>
     </ion-content>
+    <ion-footer-bar align-title="center" class="bar-positive" keyboard-attach>
+        <div class="button-bar">
+            <button type="button" class="button button-clear" ui-sref="auth.register">{{'auth.welcome.register' | translate}}</button>
+        </div>
+    </ion-footer-bar>
 </ion-view>

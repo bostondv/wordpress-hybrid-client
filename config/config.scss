@@ -20,6 +20,9 @@ $bar-height: 64px;
     p {
         opacity: .5;
         font-size: .7em;
+        span {
+            text-decoration: underline;
+        }
     }
 }
 
