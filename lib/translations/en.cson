@@ -129,12 +129,15 @@
     "form":
         "required": "This field is required."
         "invalidDate": "Invalid date."
+        "min": "Value is too low."
+        "max": "Value is too high."
         "error": "An unknown error occurred. Please try again."
-        "submitted": "Post successfully submitted."
+        "submitted": "You Stand Down has been submitted.  You can also get an official certificate of participation from OSHA.  <a href=\"https://www.osha.gov/StopFallsStandDown/\">Find out more here</a>."
     "labels":
         "date": "Date"
         "pick": "Pick"
         "attendees": "Number of Attendees"
+        "attendeesPlaceholder": "eg. 5"
         "title": "Title"
         "titlePlaceholder": "Title to summarize this activity"
         "notes": "Notes"

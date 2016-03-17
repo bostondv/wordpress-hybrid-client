@@ -4,3 +4,4 @@ android/*
 !ios/splash.png
 !android/icon.png
 !android/splash.png
+!android/icon-notification.png

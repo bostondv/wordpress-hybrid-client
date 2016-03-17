@@ -25,14 +25,14 @@
     "icon": "icon ion-bookmark"
 }, {
     "type": "internal",
-    "trans": "menu.settings",
-    "route": "public.params",
-    "icon": "icon ion-gear-b"
-}, {
-    "type": "internal",
     "trans": "menu.postStandDown",
     "route": "public.compose({ slug: 'stand-downs' })",
     "icon": "icon ion-compose"
+}, {
+    "type": "internal",
+    "trans": "menu.settings",
+    "route": "public.params",
+    "icon": "icon ion-gear-b"
 }, {
     "type": "internal",
     "trans": "menu.logout",

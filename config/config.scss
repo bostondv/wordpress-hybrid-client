@@ -32,6 +32,15 @@ $bar-height: 64px;
     }
 }
 
+.item-energized,
+.item-positive,
+.item-balanced,
+.item-assertive {
+    a {
+        color: $palette-primary-icon;
+    }
+}
+
 .flush-top {
     margin-top: 0 !important;
 }
