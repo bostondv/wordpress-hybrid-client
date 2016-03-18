@@ -24,7 +24,7 @@
     "login": "Login"
     "logout": "Logout"
     "register": "Register"
-    "postStandDown": "Post a Stand Down"
+    "postStandDown": "Post a Stand-Down"
 "pushNotifications":
     "newContent":
         "title": "New content!"
@@ -116,15 +116,15 @@
             "firstName": "First Name"
             "lastName": "Last Name"
             "password": "Password"
-            "optIn": "I'd like to get updates from National Safety Stand Down Partners"
+            "optIn": "I’d like to get updates on falls and other safety & health information from CPWR – The Center for Construction Research and Training."
             "jobTitle": "What's your job title? Select the best match"
             "trade": "Select your trade"
             "companySize": "Company size"
     "welcome":
-        "title": "National Safety Stand Down"
+        "title": "National Safety Stand-Down"
         "login": "Existing User? Login Here"
         "register": "Get Started"
-        "intro": "<h2>Welcome to The National Safety Stand Down App!</h2><p>Get The Latest Stand Down Updates</p><p>Access Free Stand Down Meeting Guides & Other Helpful Resources</p><p>Share your stand down activities to show commitment to reducing falls in construction</p>"
+        "intro": "<h2>Welcome to The National Safety Stand-Down App!</h2><p>Get The Latest Updates on The National Fall Prevention Campaign</p><p>Access Free Stand-Down Meeting</p><p>Guides & Other Helpful Resources</p><p>Share Your Stand-Down Activities</p>"
 "compose":
     "form":
         "required": "This field is required."
@@ -132,7 +132,7 @@
         "min": "Value is too low."
         "max": "Value is too high."
         "error": "An unknown error occurred. Please try again."
-        "submitted": "You Stand Down has been submitted.  You can also get an official certificate of participation from OSHA.  <a href=\"https://www.osha.gov/StopFallsStandDown/\">Find out more here</a>."
+        "submitted": "Thank you for your submission. To receive a Certificate of Participation visit <a href=\"https://www.osha.gov/StopFallsStandDown/\">this OSHA Website</a>."
     "labels":
         "date": "Date"
         "pick": "Pick"
@@ -146,7 +146,7 @@
         "photoGallery": "Gallery"
         "photoCamera": "Take Picture"
     "stand-downs":
-        "title": "Post a Stand Down"
-        "intro": "<p>We'd love to know how you're promoting awareness of falls on your job sites.  Use this form to submit a Stand Down activity and you could be featured on our official website <a href=\"http://www.stopconstructionfalls.com/\" target=\"_blank\">www.stopconstructionfalls.com</a>.<p>"
-        "submit": "Post Stand Down"
+        "title": "Post a Stand-Down"
+        "intro": "<p>Let us know how you're raising awareness of fall prevention on your jobsites. Use this form to submit a Stand-Down activity and you could be featured on our official website <a href=\"http://stopconstructionfalls.com/\" target=\"_blank\">stopconstructionfalls.com</a>. <a ui-sref=\"public.pages.id({id: 3816})\">Learn more about how this information will be used</a>."
+        "submit": "Post Stand-Down"
     

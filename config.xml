@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.harnessup.nationalsafetystanddown" version="0.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Stand Down</name>
+    <name>Stand-Down</name>
     <description>
-        Official National Safety Stand Down App.
+        Official National Safety Stand-Down App.
     </description>
     <author email="info@harnessup.com" href="http://harnessup.com">
         Harness

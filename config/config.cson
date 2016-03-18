@@ -1,4 +1,4 @@
-"title": "National Safety Stand Down"
+"title": "National Safety Stand-Down"
 
 # API
 "api":
@@ -187,7 +187,7 @@
     "appRate":
         "enabled": false
         "language": "en"
-        "appName": "National Safety Stand Down"
+        "appName": "National Safety Stand-Down"
         "openStoreInApp": true
         "usesUntilPrompt": 3
         "promptForNewVersion": true
