@@ -11,6 +11,9 @@
     <access origin="*" />
     <allow-navigation href="http://nationalsafetystanddown.com/*" />
     <allow-navigation href="http://staing.nationalsafetystanddown.com/*" />
+    <allow-navigation href="http://nationalsafetystanddown.dev/*" />
+    <allow-navigation href="https://*.youtube.com/*" />
+    <allow-navigation href="https://youtube.com/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="mailto:*" />

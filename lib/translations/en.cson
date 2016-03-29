@@ -96,6 +96,7 @@
         "email": "Invalid email addresss."
         "passwordMinlength": "Password must be at least 8 characters."
         "error": "An unknown error occurred. Please try again."
+        "general": "Please correct all errors."
     "login":
         "title": "Login"
         "submit": "Login"
@@ -124,7 +125,7 @@
         "title": "National Safety Stand-Down"
         "login": "Existing User? Login Here"
         "register": "Get Started"
-        "intro": "<h2>Welcome to The National Safety Stand-Down App!</h2><p>Get The Latest Updates on The National Fall Prevention Campaign</p><p>Access Free Stand-Down Meeting</p><p>Guides & Other Helpful Resources</p><p>Share Your Stand-Down Activities</p>"
+        "intro": "<h2>Welcome to The National Safety Stand-Down App!</h2><p>Get The Latest Updates on The National Fall Prevention Campaign.</p><p>Access Free Stand-Down Meeting.</p><p>Guides & Other Helpful Resources.</p><p>Share Your Stand-Down Activities.</p>"
 "compose":
     "form":
         "required": "This field is required."

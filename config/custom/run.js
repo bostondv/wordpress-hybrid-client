@@ -1,9 +1,9 @@
 let mod = angular.module('wordpress-hybrid-client.overwriteRun', []);
 
-mod.run(($ionicPlatform, $window, $cordovaStatusbar, $ionicHistory) => {
+mod.run(($ionicPlatform, $window, $cordovaStatusbar, $cordovaKeyboard, $ionicHistory) => {
     $ionicPlatform.ready(() => {
         if ($window.cordova && $window.cordova.plugins.Keyboard) {
-            $window.cordova.plugins.Keyboard.disableScroll(true);
+            $cordovaKeyboard.disableScroll(true);
         }
 
         // Style light statusbar
