@@ -36,7 +36,7 @@ module.exports = {
             loader: "ng-annotate?add=true!babel"
         }, {
             test: /\.html$/,
-            loader: 'html'
+            loader: 'html?-removeRedundantAttributes'
         }, {
             test: /\.json$/,
             loader: "json"
